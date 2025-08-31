@@ -1,6 +1,6 @@
-# Claude's Services
+# Indigo's Services
 
-Personal infrastructure services for Claude Code integration.
+Personal infrastructure services for Indigo Code integration.
 
 ## Services
 
@@ -30,11 +30,11 @@ Each service is configured for Railway deployment:
 Both services provide full REST APIs for:
 - Automated credential management (Vaultwarden)
 - Knowledge base operations (Outline)
-- Perfect for Claude Code automation workflows
+- Perfect for Indigo Code automation workflows
 
 ## Usage
 
-Deploy both services on Railway and configure API access for seamless integration with Claude Code workflows.
+Deploy both services on Railway and configure API access for seamless integration with Indigo Code workflows.
 
 ---
-*This infrastructure is primarily managed by Claude Code for automated workflows.*
+*This infrastructure is primarily managed by Indigo Code for automated workflows.*
