@@ -1,0 +1,22 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "yarn start"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+restartPolicyType = "always"
+
+[[services]]
+name = "outline"
+
+[services.variables]
+NODE_ENV = { default = "production" }
+SECRET_KEY = { default = "generate-random-32-char-string" }
+UTILS_SECRET = { default = "generate-random-32-char-string" }
+FILE_STORAGE = { default = "local" }
+FILE_STORAGE_LOCAL_ROOT_DIR = { default = "/var/lib/outline/data" }
+ENABLE_UPDATES = { default = "false" }
+WEB_CONCURRENCY = { default = "1" }
+MAXIMUM_IMPORT_SIZE = { default = "5120000" }
+DEBUG = { default = "cache,presenters,events,emails,mailer,utils,multiplayer,server,services" }

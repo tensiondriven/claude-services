@@ -1,0 +1,18 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "/vaultwarden"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+restartPolicyType = "always"
+
+[[services]]
+name = "vaultwarden"
+
+[services.variables]
+ADMIN_TOKEN = { default = "changeme" }
+SIGNUPS_ALLOWED = { default = "true" }
+WEB_VAULT_ENABLED = { default = "true" }
+WEBSOCKET_ENABLED = { default = "true" }
+DATABASE_URL = { default = "data/db.sqlite3" }
