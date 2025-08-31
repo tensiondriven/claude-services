@@ -11,8 +11,10 @@ restartPolicyType = "always"
 name = "vaultwarden"
 
 [services.variables]
+ROCKET_PORT = { default = "$PORT" }
+ROCKET_ADDRESS = { default = "0.0.0.0" }
 ADMIN_TOKEN = { default = "changeme" }
 SIGNUPS_ALLOWED = { default = "true" }
 WEB_VAULT_ENABLED = { default = "true" }
 WEBSOCKET_ENABLED = { default = "true" }
-DATABASE_URL = { default = "data/db.sqlite3" }
+DATABASE_URL = { default = "/data/db.sqlite3" }
